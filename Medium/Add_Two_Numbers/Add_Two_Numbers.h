@@ -37,9 +37,8 @@ public:
         int final_integer = listInteger1 + listInteger2;
         return convertIntegerToList(final_integer);
     }
-};
-
-    //TODO: i need to better learn the properties of list 
+	
+	//TODO: i need to better learn the properties of list 
     ListNode* convertIntegerToList(int value) {
         
         ListNode* list = new ListNode(0); 
@@ -58,3 +57,6 @@ public:
         
         return list;
     }
+};
+
+    
