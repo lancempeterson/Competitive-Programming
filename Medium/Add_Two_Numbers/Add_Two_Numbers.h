@@ -21,42 +21,60 @@ Explanation: 342 + 465 = 807.
  */
 class Solution {
 public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         
-        int listInteger1 = 0;
-        int listInteger2 = 0;
-        
-        //TODO: ok so l1 is the head node, find a way to loop thru till the current node next == null
-        // for ( int n = 0; l1->next != null; n++){
-        //     listInteger1 += pow (l1.val(n), n)
-        // }
-        
-        //loop for second list
-        
-        
-        int final_integer = listInteger1 + listInteger2;
-        return convertIntegerToList(final_integer);
-    }
-	
-	//TODO: i need to better learn the properties of list 
-    ListNode* convertIntegerToList(int value) {
-        
-        ListNode* list = new ListNode(0); 
-  
-        int dig = 0;
-        while ( value != 0 ){
-            
-            dig = value % 10;
-            
-            // put in the data  
-            //new_node->val = dig;  
-            
-            value = value /10
-            
+        unsigned long long int listInteger1 = 0;
+        unsigned long long int listInteger2 = 0;
+		ListNode* traversialPointer1 = l1;
+		ListNode* traversialPointer2 = l2;
+		
+        //l1 is the head node, loop thru till the current node == null
+		unsigned long long int multiplier = 1;
+		while ( traversialPointer1 != NULL ) {
+			listInteger1 += traversialPointer1->val * multiplier;
+			multiplier *= 10;
+			traversialPointer1 = traversialPointer1->next;
+		}
+		
+		multiplier = 1;
+		while ( traversialPointer2 != NULL ){
+			listInteger2 += traversialPointer2->val * multiplier;
+			multiplier *= 10;
+			traversialPointer2 = traversialPointer2->next;
+		}
+		
+        unsigned long long int final_integer = listInteger1 + listInteger2;
+        if ( final_integer == 0 ) {
+            ListNode* listZero = new ListNode(0);
+            return listZero;
         }
-        
-        return list;
+        else {
+            return convertIntegerToReverseList(final_integer);
+        }
+    }
+private:
+ListNode* convertIntegerToReverseList(unsigned long long int final_integer) {
+		unsigned long long int value = final_integer;
+        ListNode* headNode = NULL;
+        int dig = 0;
+        while ( value != 0 ) {
+            dig = value % 10;
+            ListNode* newNode = new ListNode(dig);
+            if ( headNode == NULL ) {
+                headNode = newNode;
+            }
+            else {
+               ListNode* tempNode = headNode;
+                while ( tempNode->next != NULL ) {
+                    tempNode = tempNode->next;
+                } 
+                tempNode->next = newNode;
+            }
+            value = value /10;
+        }
+        return headNode;
     }
 };
+
 
     
