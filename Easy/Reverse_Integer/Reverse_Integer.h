@@ -20,10 +20,10 @@ when the reversed integer overflows.
 class Solution {
 public:
     int reverse(int x) {
-        
+		
 		int neg_limit = -2147483648;
 		int pos_limit = 2147483647;
-        if ( x >= pos_limit || x <= neg_limit )
+		if ( x >= pos_limit || x <= neg_limit )
 			return 0;
         
         bool isNeg = false;
@@ -37,14 +37,14 @@ public:
 		for (int i = 0; i < n / 2; i++) 
 			swap(string_x[i], string_x[n - i - 1]); 
 		
-        int reversedInt;
+		int reversedInt;
 		try {
 			reversedInt = stoi(string_x);
 		}
 		catch(std::out_of_range& e){
 			return 0;
 		}
-
+		
 		if ( isNeg ){
 			reversedInt = 0-reversedInt;
 		}
