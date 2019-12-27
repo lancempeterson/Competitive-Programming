@@ -25,8 +25,8 @@ public:
 		int pos_limit = 2147483647;
 		if ( x >= pos_limit || x <= neg_limit )
 			return 0;
-        
-        bool isNeg = false;
+		
+		bool isNeg = false;
 		if ( x < 0 )
 			isNeg = true;
 		else
