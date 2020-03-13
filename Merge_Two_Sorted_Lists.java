@@ -8,9 +8,7 @@
  */
 class Solution {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        
         List<Integer> list = new ArrayList<Integer>();
-		
 		while ( l1 != null || l2 != null ) {
             if ( l1 != null) {
 		        list.add(l1.val);
@@ -21,9 +19,7 @@ class Solution {
 				l2 = l2.next;
 			}
 		}
-        
         Collections.sort(list);
-		
 		ListNode root = null;		
 		for (int i = 0; i < list.size(); i++) {
 			ListNode temp = new ListNode(list.get(i));
