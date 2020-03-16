@@ -6,7 +6,7 @@ class Solution {
     }
     
     public void generatePermutations(List<String> list, String s, int index){
-        //goal
+		//goal
 		if ( index == s.length() ) {
 			list.add(s);
 			return;
@@ -30,6 +30,6 @@ class Solution {
 			//skip the character
 			generatePermutations(list, s, index+1);
 		}	
-    }
+	}
     
 }
