@@ -8,7 +8,7 @@ class Solution {
             return true;
         }
         else {
-            for ( int i = 0; i < s.length(); i++ ){
+          for ( int i = 0; i < s.length(); i++ ){
                 String s1 = "";
                 for ( int j = 0; j <= i; j++ ){
                     s1 += s.charAt(j);
@@ -16,8 +16,8 @@ class Solution {
                 String s2 = s.substring(s1.length());
                 Boolean containsS1 = wordDict.contains(s1);
                 if ( containsS1 ){
-                    boolean subProb;
-                    if ( map.containsKey(s2) ) {
+					boolean subProb;
+					if ( map.containsKey(s2) ) {
 						subProb = map.get(s2);
 					}
 					else {
