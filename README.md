@@ -1,2 +1,2 @@
-# LeetCode
-My solutions to various LeetCode problems.
+# Competitive Programming
+My solutions to various competitive programming problems.
