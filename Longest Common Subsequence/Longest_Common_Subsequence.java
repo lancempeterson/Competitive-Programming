@@ -5,7 +5,7 @@ class Solution {
         // int dp [][] = new int [ar1.length][ar2.length];
         // return LCS(ar1, ar2, 0, 0, dp);
         return iterativeLCS(text1, text2);
-    }
+	}
 	//Dynamic Programming with Memoization (~19 ms)
 	public int LCS(char [] ar1, char [] ar2, int i, int j, int [][] dp){
 		if (i == ar1.length || j == ar2.length) {
