@@ -35,13 +35,13 @@ class Solution {
         char [] ar1 = text1.toCharArray();
         char [] ar2 = text2.toCharArray();
         int dp [][] = new int [ar1.length + 1][ar2.length + 1];
-        for (int i = 0; i < ar1.length; i++) {
-        	for (int j = 0; j < ar2.length; j++) {
-        		if (ar1[i] == ar2[j]) {
-        			dp[i+1][j+1] = dp[i][j] + 1;
-        		} else {
-        			dp[i+1][j+1] = Math.max(dp[i+1][j], dp[i][j+1]);
-        		}
+        for (int i = 1; i < dp.length; i++) {
+        	for (int j = 1; j < dp[i].length; j++) {
+                if (ar1[i-1] == ar2[j-1]){
+                    dp[i][j] = 1 + dp[i-1][j-1];  
+                } else {
+                    dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);
+                }
         	}
         }
         return dp[ar1.length][ar2.length];
