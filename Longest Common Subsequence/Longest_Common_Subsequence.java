@@ -37,12 +37,12 @@ class Solution {
         int dp [][] = new int [ar1.length + 1][ar2.length + 1];
         for (int i = 1; i < dp.length; i++) {
         	for (int j = 1; j < dp[i].length; j++) {
-                if (ar1[i-1] == ar2[j-1]){
-                    dp[i][j] = 1 + dp[i-1][j-1];  
+				if (ar1[i-1] == ar2[j-1]){
+					dp[i][j] = 1 + dp[i-1][j-1];  
                 } else {
-                    dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);
+					dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);
                 }
-        	}
+			}
         }
         return dp[ar1.length][ar2.length];
     }
