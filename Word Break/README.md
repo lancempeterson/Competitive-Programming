@@ -6,18 +6,21 @@ Note:
 
 The same word in the dictionary may be reused multiple times in the segmentation.
 You may assume the dictionary does not contain duplicate words.
-Example 1:
 
+Example 1:
 Input: s = "leetcode", wordDict = ["leet", "code"]
+<br>
 Output: true
 Explanation: Return true because "leetcode" can be segmented as "leet code".
-Example 2:
 
+Example 2:
 Input: s = "applepenapple", wordDict = ["apple", "pen"]
+<br>
 Output: true
 Explanation: Return true because "applepenapple" can be segmented as "apple pen apple".
              Note that you are allowed to reuse a dictionary word.
+			 
 Example 3:
-
 Input: s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]
+<br>
 Output: false
