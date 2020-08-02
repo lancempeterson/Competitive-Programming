@@ -24,7 +24,7 @@ Clues for identifying this pattern.
 Examples:
 * [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 * [Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
-* [Move Zeroes](https://leetcode.com/problems/move-zeroes/)
+* [Move Zeroes](https://github.com/lancempeterson/Competitive-Programming/tree/master/Coding%20Problems%20%26%20My%20Solutions/Move%20Zeroes)
 
 **2) Fast/Slow Pointers**
 
