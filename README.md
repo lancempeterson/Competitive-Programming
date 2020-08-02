@@ -1,7 +1,7 @@
 # Competitive Programming
 My solutions to various competitive programming problems. I work towards finding optimized solutions utilizing various algorithms and data structures.
 
-[View My 120+ Solutions!](Coding Problems & My Solutions)
+[View My 120+ Solutions!](https://github.com/lancempeterson/Competitive-Programming/tree/master/Coding%20Problems%20%26%20My%20Solutions)
 
 ---
 __Competitive Programming Techniques__
