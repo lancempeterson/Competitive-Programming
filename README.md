@@ -1,6 +1,8 @@
 # Competitive Programming
 My solutions to various competitive programming problems. I work towards finding optimized solutions utilizing various algorithms and data structures.
 
+[View My 120+ Solutions!](Coding Problems & My Solutions)
+
 ---
 __Competitive Programming Techniques__
 
