@@ -4,45 +4,34 @@
  *     int val;
  *     TreeNode left;
  *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
  * }
  */
 class Solution {
     public List<String> binaryTreePaths(TreeNode root) {
-        List<String> list = new ArrayList<>();
-        if ( root == null ){
-            return list;
+        List<String> ans = new ArrayList<>();
+        if (root != null){
+            buildPaths(ans, root, new StringBuilder());
         }
-        String s = "";
-        s += Integer.toString(root.val);
-        if ( root.left == null && root.right == null ){
-            list.add(s);
-        }
-        if ( root.left != null ){
-                DFS(root.left, s, list);
-            }
-        if (root.right != null){
-            DFS(root.right, s, list);
-        }
-        return list;
+        return ans;
     }
-    
-    public void DFS(TreeNode root, String s, List<String> list){
-        s += "->";
-        if ( root.left == null && root.right == null ){
-            s += Integer.toString(root.val);
-            list.add(s);
-            return;
+    public void buildPaths(List<String> list, TreeNode node, StringBuilder sb){
+        if (node.left == null && node.right == null){
+            list.add(sb.toString() + node.val);
         }
-        else {
-            s += Integer.toString(root.val);
-            if ( root.left != null ){
-                DFS(root.left, s, list);
-            }
-            if (root.right != null){
-                DFS(root.right, s, list);
-            }
-            return;
+        sb.append(node.val);
+        sb.append("->");
+        if (node.left != null){
+            buildPaths(list, node.left, new StringBuilder(sb));
+        }
+        if (node.right != null){
+            buildPaths(list, node.right, new StringBuilder(sb));
         }
     }
 }
