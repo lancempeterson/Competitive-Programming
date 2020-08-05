@@ -4,28 +4,32 @@
  *     int val;
  *     TreeNode left;
  *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
  * }
  */
 class Solution {
     public int kthSmallest(TreeNode root, int k) {
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(Collections.reverseOrder());
-        DFS(root, k, maxHeap);
-        return maxHeap.peek();
-    }
-    public void DFS(TreeNode node, int k, PriorityQueue<Integer> maxHeap){
-        if (node == null){
-            return;
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode node = root;
+        int count = 0;
+        while (node != null || !stack.isEmpty()){
+            while (node != null){
+                stack.push(node);
+                node = node.left;
+            }
+            node = stack.pop();
+            count++;
+            if (count == k){
+                return node.val;//stop on the Kth node
+            }
+            node = node.right;
         }
-        if (node.left != null){
-            DFS(node.left, k, maxHeap);
-        }
-        maxHeap.add(node.val);
-        if (maxHeap.size() > k){
-            maxHeap.remove();
-        }
-        if (node.right != null){
-            DFS(node.right, k, maxHeap);
-        }
+        return count;
     }
 }
