@@ -47,3 +47,19 @@ Clues for identifying this pattern.
 Examples:
 * [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
 * [Happy Number](https://leetcode.com/problems/happy-number/)
+
+**3) 2 Pointers**
+
+**4) Modified Binary Search**
+
+**5) Depth First Search**
+
+**6) Breadth First Search**
+
+**7) Linked List Reversal**
+
+**8) Dynamic Programming**
+
+**9) Backtracking**
+
+**10) Greedy Algorithms**
