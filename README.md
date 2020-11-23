@@ -63,3 +63,27 @@ Examples:
 **9) Backtracking**
 
 **10) Greedy Algorithms**
+
+---
+
+__Competitive Programming Problem Types__
+
+**1) Binary**
+
+**2) Array**
+
+**3) String**
+
+**4) Linked List**
+
+**5) Tree**
+
+**6) Heap**
+
+**7) Dynamic Programming**
+
+**8) Matrix**
+
+**9) Graph**
+
+**10) Interval**
