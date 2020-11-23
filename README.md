@@ -64,6 +64,9 @@ Examples:
 
 **10) Greedy Algorithms**
 
+Clues for identifying this pattern.
+* An array problem where they want an O(N) runtime and constant O(1) space.
+
 ---
 
 __Competitive Programming Problem Types__
