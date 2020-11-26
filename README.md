@@ -52,6 +52,10 @@ Examples:
 
 **4) Modified Binary Search**
 
+Clues for identifying this pattern.
+* Problem involves a sorted array.
+* Problem asks for solution in Log N time.
+
 **5) Depth First Search**
 
 **6) Breadth First Search**
