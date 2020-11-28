@@ -1,39 +1,30 @@
 class Solution {
     public int search(int[] nums, int target) {
-        if ( nums == null || nums.length == 0 ){
+        if (nums == null || nums.length < 1){
             return -1;
         }
         int start = 0;
         int end = nums.length - 1;
-        int leftVal = nums[start];
-        int rightVal = nums[end];
+        int mid = 0;
         while (start <= end){
-            int mid = start + ((end - start)/2);
-            if (target == nums[mid]){
+            mid = start + (end - start) / 2;
+            if (nums[mid] == target){
                 return mid;
             }
-            boolean leftSideSequential = leftVal <= nums[mid];
-            boolean useLeftSide;
-            if ( leftSideSequential ){
-                if (target >= leftVal && target < nums[mid]){
-                    useLeftSide = true;
+            if (nums[start] <= nums[mid]){//left side sorted
+                //check if target is in left sorted half
+                if (target >= nums[start] && target < nums[mid]){
+                    end = mid-1;
                 } else {
-                    useLeftSide = false;
+                    start = mid+1;
                 }
-                
-            } else {
-                if (target <= rightVal && target > nums[mid]){
-                    useLeftSide = false;
+            } else {//right side sorted
+                //check if target is in right sorted half
+                if (target > nums[mid] && target <= nums[end]){
+                    start = mid+1;
                 } else {
-                    useLeftSide = true;
+                    end = mid-1;
                 }
-            }
-            if (useLeftSide){
-                rightVal = nums[mid];
-                end = mid - 1;
-            } else {
-                leftVal = nums[mid];
-                start = mid + 1;
             }
         }
         return -1;
