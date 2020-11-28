@@ -3,6 +3,29 @@ My solutions to various competitive programming problems. I work towards finding
 
 [View My 120+ Solutions!](https://github.com/lancempeterson/Competitive-Programming/tree/master/Coding%20Problems%20%26%20My%20Solutions)
 
+- [Heading](#heading)
+  * [Sub-heading](#sub-heading)
+- [Heading](#heading-1)
+  * [Sub-heading](#sub-heading-1)
+
+# Heading levels
+
+## Heading
+
+This is an h1 heading
+
+### Sub-heading
+
+This is an h2 heading
+
+## Heading
+
+This is an h1 heading
+
+### Sub-heading
+
+This is an h2 heading
+
 ---
 __Competitive Programming Techniques__
 
