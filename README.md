@@ -3,10 +3,10 @@
 Table of Contents
 
 - [My Solutions](#My-Solutions)
-  * [120+ Solutions](#sub-heading)
+  * [120+ Solutions](#120+-Solutions)
 - [Competitive Programming Techniques](#Competitive-Programming-Techniques)
   * [The Sliding Window](#The-Sliding-Window)
-  * [Fast/Slow Pointers](#Fast/Slow-Pointers)
+  * [Fast and Slow Pointers](#Fast-and-Slow-Pointers)
   * [2 Pointers](#2-Pointers)
   * [Modified Binary Search](#Modified-Binary-Search)
   * [Depth First Search](#Depth-First-Search)
@@ -59,7 +59,7 @@ Examples:
 * [Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
 * [Move Zeroes](https://github.com/lancempeterson/Competitive-Programming/tree/master/Coding%20Problems%20%26%20My%20Solutions/Move%20Zeroes)
 
-### Fast/Slow Pointers
+### Fast and Slow Pointers
 
 There are several competitive programming questions that can be solved using the
 Fast/Slow Pointers technique. Fast/Slow Pointers is a technique that uses two
