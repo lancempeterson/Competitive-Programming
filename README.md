@@ -3,7 +3,7 @@
 Table of Contents
 
 - [My Solutions](#My-Solutions)
-  * [120+ Solutions](#120+-Solutions)
+  * [120+ Solutions](#120-Solutions-and-Counting)
 - [Competitive Programming Techniques](#Competitive-Programming-Techniques)
   * [The Sliding Window](#The-Sliding-Window)
   * [Fast and Slow Pointers](#Fast-and-Slow-Pointers)
@@ -30,7 +30,7 @@ Table of Contents
 
 My solutions to various competitive programming problems. I work towards finding optimized solutions utilizing various algorithms and data structures.
 
-### 120+ Solutions
+### 120 Solutions and Counting
 
 [View My 120+ Solutions!](https://github.com/lancempeterson/Competitive-Programming/tree/master/Coding%20Problems%20%26%20My%20Solutions)
 
