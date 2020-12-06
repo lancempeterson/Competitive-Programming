@@ -1,4 +1,7 @@
-# Competitive Programming
+# Competitive Programming Guide
+
+If you find some value in this content and want to show your appreciation then feel free to buy me a coffee! :)
+<a href="https://www.buymeacoffee.com/lancepeterson" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
 Table of Contents
 
