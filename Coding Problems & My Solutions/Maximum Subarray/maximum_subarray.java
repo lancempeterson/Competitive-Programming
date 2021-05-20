@@ -10,3 +10,18 @@ class Solution {
         return max;
     }
 }
+
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int max = nums[0];
+        int runningCount = max;
+        for (int i = 1; i < nums.length; i++) {
+            if (runningCount < 0) {
+                runningCount = 0;
+            }
+            runningCount += nums[i];
+            max = Math.max(max, runningCount);
+        }
+        return max;
+    }
+}
