@@ -1,6 +1,6 @@
 # Competitive Programming Guide
 
-A guide for understanding the techniques, algorithms, and data structures for solving competitive programming coding challenges and my recommended problems for most effective study. 
+A guide for understanding the techniques, algorithms, and data structures for solving competitive programming coding challenges and my recommended problems for most effective study.
 
 If you find some value in this content and want to show your appreciation then feel free to buy me a coffee! :)
 
@@ -11,27 +11,6 @@ Table of Contents
 
 - [My Solutions](#My-Solutions)
   * [120+ Solutions](#120-Solutions-and-Counting)
-- [Competitive Programming Techniques](#Competitive-Programming-Techniques)
-  * [The Sliding Window](#The-Sliding-Window)
-  * [Fast and Slow Pointers](#Fast-and-Slow-Pointers)
-  * [2 Pointers](#2-Pointers)
-  * [Modified Binary Search](#Modified-Binary-Search)
-  * [Depth First Search](#Depth-First-Search)
-  * [Breadth First Search](#Breadth-First-Search)
-  * [Linked List Reversal](#Linked-List-Reversal)
-  * [Dynamic Programming](#Dynamic-Programming)
-  * [Backtracking](#Backtracking)
-  * [Greedy Algorithms](#Greedy-Algorithms)
-- [Competitive Programming Problem Types](#Competitive-Programming-Problem-Types)
-  * [Array](#Array)
-  * [Binary](#Binary)
-  * [String](#String)
-  * [Linked List](#Linked-List)
-  * [Tree](#Tree)
-  * [Dynamic Programming](#Dynamic-Programming)
-  * [Matrix](#Array)
-  * [Graph](#Graph)
-  * [Interval](#Interval)
 
 ## My Solutions
 
@@ -40,6 +19,8 @@ My solutions to various competitive programming problems. I work towards finding
 ### 120 Solutions and Counting
 
 [View My 120+ Solutions!](https://github.com/lancempeterson/Competitive-Programming/tree/master/Coding%20Problems%20%26%20My%20Solutions)
+
+<!--
 
 ## Competitive Programming Techniques
 
@@ -135,7 +116,7 @@ Categories of Competitive Programming problem types.
 
 ### Interval
 
-<!-- __Competitive Programming Techniques__
+__Competitive Programming Techniques__
 
 **1) The Sliding Window**
 
@@ -225,3 +206,4 @@ __Competitive Programming Problem Types__
 **9) Graph**
 
 **10) Interval** -->
+
