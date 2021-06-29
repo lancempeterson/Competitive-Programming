@@ -10,15 +10,15 @@
  */
 class Solution {
     func reverseList(_ head: ListNode?) -> ListNode? {
-        var cur: ListNode? = head
-        var next: ListNode? = nil
-        var prev: ListNode? = nil
-        while cur != nil {
-            next = cur?.next
-            cur?.next = prev
-            prev = cur
-            cur = next
+        var p: ListNode? = nil
+        var n: ListNode? = nil
+        var c = head
+        while c != nil {
+            n = c?.next
+            c?.next = p
+            p = c
+            c = n
         }
-        return prev
+        return p
     }
 }
