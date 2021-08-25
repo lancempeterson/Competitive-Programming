@@ -19,3 +19,27 @@ class Solution {
         return max
     }
 }
+
+class Solution {
+    fun findMaxLength(nums: IntArray): Int {
+        var hashMap = HashMap<Int, Int>()
+        var ans = 0
+        var count = 0
+        var i = 0
+        hashMap.put(0, -1)
+        while (i < nums.size) {
+            if (nums[i] == 0) {
+                count -= 1
+            } else {
+                count += 1
+            }
+            if (hashMap.containsKey(count)) {
+                ans = maxOf(ans, i - hashMap.get(count)!!)
+            } else {
+                hashMap[count] = i
+            }
+            i += 1
+        }
+        return ans
+    }
+}
