@@ -1,3 +1,26 @@
+
+class Solution {
+    fun findMaxLength(nums: IntArray): Int {
+        var count = 0
+        val hashMap = HashMap<Int, Int>()
+        var ans = 0
+        hashMap[0] = -1
+        for ((i, num) in nums.withIndex()) {
+            if (num == 1) {
+                count += 1
+            } else {
+                count -= 1
+            }
+            if (hashMap.containsKey(count)) {
+                ans = maxOf(ans, i - hashMap[count]!!)
+            } else {
+                hashMap[count] = i
+            }
+        }
+        return ans
+    }
+}
+
 class Solution {
     fun findMaxLength(nums: IntArray): Int {
         var count = 0
