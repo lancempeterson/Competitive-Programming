@@ -1,5 +1,20 @@
 class Solution {
     fun maxSubArray(nums: IntArray): Int {
+        var maxVal = Integer.MIN_VALUE
+        var count = 0
+        for ((i, num) in nums.withIndex()) {
+            if (count < 0) {
+                count = 0
+            }
+            count += num
+            maxVal = maxOf(maxVal, count)
+        }
+        return maxVal
+    }
+}
+
+class Solution {
+    fun maxSubArray(nums: IntArray): Int {
         var max = Int.MIN_VALUE
         if ( nums.size == 0 ){
             return max
