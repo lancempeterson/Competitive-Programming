@@ -11,3 +11,17 @@ class Solution {
         return intArrayOf()
     }
 }
+
+class Solution {
+    fun twoSum(nums: IntArray, target: Int): IntArray {
+        val map = HashMap<Int, Int>()
+        for ((i, num) in nums.withIndex()) {
+            if (map.containsKey(num)) {
+                return intArrayOf(map[num]!!, i)
+            }
+            val targetCompliment = target - num
+            map.put(targetCompliment, i)
+        }
+        return intArrayOf()
+    }
+}
