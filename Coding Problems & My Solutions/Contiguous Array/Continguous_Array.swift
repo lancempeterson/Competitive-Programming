@@ -19,3 +19,26 @@ class Solution {
         return maxLen
     }
 }
+
+class Solution {
+    func findMaxLength(_ nums: [Int]) -> Int {
+        var count = 0
+        var dict: [Int:Int] = [:]
+        var maxx = 0
+        dict[0] = -1
+        for (i, val) in nums.enumerated() {
+            if val == 1 {
+                count += 1
+            } else {
+                count -= 1
+            }
+            if dict[count] != nil {
+                var length = i - dict[count]!
+                maxx = max(maxx, length)
+            } else {
+                dict[count] = i
+            }
+        }
+        return maxx
+    }
+}
