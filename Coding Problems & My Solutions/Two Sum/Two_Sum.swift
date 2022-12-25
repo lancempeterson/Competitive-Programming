@@ -13,3 +13,20 @@ class Solution {
         return ans
     }
 }
+
+class Solution {
+    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+        var ans: [Int] = []
+        var dict: [Int:Int] = [:]
+        for (i, num) in nums.enumerated() {
+            if let index = dict[num] {
+                ans = [index, i]
+                break
+            } else {
+                let numToFind = target - num
+                dict[numToFind] = i
+            }
+        }
+        return ans
+    }
+}
