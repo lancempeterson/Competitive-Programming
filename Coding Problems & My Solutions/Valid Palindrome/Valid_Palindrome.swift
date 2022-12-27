@@ -21,3 +21,29 @@ class Solution {
         return true
     }
 }
+
+class Solution {
+    func isPalindrome(_ s: String) -> Bool {
+        let validChars = "abcdefghijklmnopqrstuvwxyz0123456789"
+        var s = s.lowercased()
+        let arr = Array(s)
+        var l = 0
+        var r = s.count - 1
+        while l < r {
+            if !validChars.contains(arr[l]) {
+                l += 1
+                continue
+            }
+            if !validChars.contains(arr[r]) {
+                r -= 1
+                continue
+            }
+            if arr[l] != arr[r] {
+                return false
+            }
+            l += 1
+            r -= 1
+        }
+        return true
+    }
+}
