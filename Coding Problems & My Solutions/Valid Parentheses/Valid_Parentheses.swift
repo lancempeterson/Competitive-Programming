@@ -25,3 +25,34 @@ class Solution {
         return stack.isEmpty
     }
 }
+
+class Solution {
+    func isValid(_ s: String) -> Bool {
+        var stack: [Character] = []
+        let arr = Array(s)
+        for char in arr {
+            if char == "(" || char == "[" || char == "{" {
+                stack.append(char)
+            }
+            else if char == ")" {
+                let poppedChar = stack.popLast()
+                if poppedChar != "(" {
+                    return false
+                }
+            }
+            else if char == "]" {
+                let poppedChar = stack.popLast()
+                if poppedChar != "[" {
+                    return false
+                }
+            }
+            else if char == "}" {
+                let poppedChar = stack.popLast()
+                if poppedChar != "{" {
+                    return false
+                }
+            }
+        }
+        return stack.isEmpty 
+    }
+}
