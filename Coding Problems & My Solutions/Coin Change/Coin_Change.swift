@@ -23,3 +23,35 @@ class Solution {
         }
     }
 }
+
+// Note the code below exceeds the time limit, as it is O(N^2) time complexity
+// But it is a brute force solution that works slowly for low amounts.
+
+
+func coinChange(_ coins: [Int], _ amount: Int) -> Int {
+    //var arr: [Int] = []
+    var coins = coins.sorted()
+    coins = coins.reversed()
+    //print("coins: \(coins)")
+    return useCoin(coins: coins, remaining: amount)
+}
+
+func useCoin(coins: [Int], remaining: Int) -> Int {
+    if remaining == 0 {
+        return 0
+    }
+    var minCoins = Int.max
+    for coin in coins {
+        if remaining >= coin {
+            let result = useCoin(coins: coins, remaining: remaining - coin)
+            if result != -1 {
+                minCoins = min(minCoins, result)
+            }
+        }
+    }
+    if minCoins == Int.max {
+        return -1
+    } else {
+        return minCoins + 1
+    }
+}
